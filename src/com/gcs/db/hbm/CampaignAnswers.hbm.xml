@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 17, 2018 12:56:11 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.gcs.db.businessDao.CampaignAnswers" table="CAMPAIGN_ANSWERS">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="campaign" class="com.gcs.db.businessDao.Campaign" fetch="join" lazy="false">
+            <column name="CAMPAIGN_ID" />
+        </many-to-one>
+        <many-to-one name="campaignQuestions" class="com.gcs.db.businessDao.CampaignQuestions" fetch="join" lazy="false">
+            <column name="CAMPQUESTION_ID" />
+        </many-to-one>
+        <many-to-one name="vendor" class="com.gcs.db.businessDao.Vendor" fetch="join" lazy="false">
+            <column name="VENDOR_ID" />
+        </many-to-one>
+        <property name="answer" type="java.lang.String">
+            <column name="ANSWER" />
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="CREATEDDATE" />
+        </property>
+        <property name="remarks" type="java.lang.String">
+            <column name="REMARKS" />
+        </property>
+    </class>
+</hibernate-mapping>

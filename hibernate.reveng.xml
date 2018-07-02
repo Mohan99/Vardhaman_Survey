@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="vardhaman" match-name="campaign"/>
+  <table-filter match-catalog="vardhaman" match-name="campaign_answers"/>
+  <table-filter match-catalog="vardhaman" match-name="campaign_questions"/>
+  <table-filter match-catalog="vardhaman" match-name="user"/>
+  <table-filter match-catalog="vardhaman" match-name="vendor"/>
+  <table-filter match-catalog="vardhaman" match-name="vendor_type"/>
+</hibernate-reverse-engineering>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 17, 2018 12:56:11 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.gcs.db.businessDao.VendorType" table="VENDOR_TYPE">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <!-- <set name="campaigns" table="VENDOR_TYPE" inverse="false" lazy="true">
+            <key>
+                <column name="ID" />
+            </key>
+            <element type="string">
+                <column name="CAMPAIGNS" />
+            </element>
+        </set>
+        <set name="vendors" table="VENDOR_TYPE" inverse="false" lazy="true">
+            <key>
+                <column name="ID" />
+            </key>
+            <element type="string">
+                <column name="VENDORS" />
+            </element>
+        </set> -->
+    </class>
+</hibernate-mapping>

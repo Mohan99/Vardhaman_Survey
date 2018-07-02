@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 7, 2017 5:52:04 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.gcs.db.businessDao.Employee" table="EMPLOYEE"
+		dynamic-update="true">
+		<id name="empId" type="java.lang.Integer">
+			<column name="EMP_ID" />
+			<generator class="identity" />
+		</id>
+		<property name="employeeId" type="java.lang.String">
+			<column name="EMPLOYEE_ID" />
+		</property>
+
+		<many-to-one name="employeeCategory" class="com.gcs.db.businessDao.Category"
+			lazy="false" fetch="join">
+			<column name="EMPLOYEE_CATEGORY" />
+		</many-to-one>
+		<many-to-one name="employeeCity" class="com.gcs.db.businessDao.Cities"
+			lazy="false" fetch="join">
+			<column name="EMPLOYEE_CITY" />
+		</many-to-one>
+		<many-to-one name="employeeCountry" class="com.gcs.db.businessDao.Countries"
+			lazy="false" fetch="join">
+			<column name="EMPLOYEE_COUNTRY" />
+		</many-to-one>
+		<many-to-one name="employeeState" class="com.gcs.db.businessDao.State"
+			lazy="false" fetch="join">
+			<column name="EMPLOYEE_STATE" />
+		</many-to-one>
+		<property name="employeeName" type="java.lang.String">
+			<column name="EMPLOYEE_NAME" />
+		</property>
+		<property name="employeeDesg" type="java.lang.String">
+			<column name="EMPLOYEE_DESG" />
+		</property>
+		<property name="employeeSpecialization" type="java.lang.String">
+			<column name="EMPLOYEE_SPECIALIZATION" />
+		</property>
+		<property name="employeeMobilenumber" type="java.lang.String">
+			<column name="EMPLOYEE_MOBILENUMBER" />
+		</property>
+		<property name="status" type="boolean">
+			<column name="STATUS" />
+		</property>
+		<!-- <set name="resourceallocationses" table="EMPLOYEE" inverse="false" 
+			lazy="true"> <key> <column name="EMPLOYEE_ID" /> </key> <element type="string"> 
+			<column name="RESOURCEALLOCATIONSES" /> </element> </set> -->
+	</class>
+</hibernate-mapping>

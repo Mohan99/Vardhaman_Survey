@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 17, 2018 12:56:11 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.gcs.db.businessDao.CampaignQuestions" table="CAMPAIGN_QUESTIONS">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="assigned" />
+		</id>
+		<many-to-one name="campaign" class="com.gcs.db.businessDao.Campaign"
+			fetch="join" lazy="false">
+			<column name="CAMPAIGN_ID" />
+		</many-to-one>
+		<property name="question" type="java.lang.String">
+			<column name="QUESTION" />
+		</property>
+		<property name="option1" type="java.lang.String">
+			<column name="OPTION1" />
+		</property>
+		<property name="option2" type="java.lang.String">
+			<column name="OPTION2" />
+		</property>
+		<property name="option3" type="java.lang.String">
+			<column name="OPTION3" />
+		</property>
+		<property name="option4" type="java.lang.String">
+			<column name="OPTION4" />
+		</property>
+		<property name="prefix" type="java.lang.String">
+			<column name="PREFIX" />
+		</property>
+
+		<property name="remarks" type="boolean">
+			<column name="REMARKS" />
+		</property>
+
+		<!-- <set name="campaignAnswerses" table="CAMPAIGN_QUESTIONS" inverse="false" 
+			lazy="true"> <key> <column name="ID" /> </key> <element type="string"> <column 
+			name="CAMPAIGNANSWERSES" /> </element> </set> -->
+	</class>
+</hibernate-mapping>
